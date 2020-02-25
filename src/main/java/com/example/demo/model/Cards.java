@@ -3,9 +3,7 @@ package com.example.demo.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -15,6 +13,17 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Cards {
 
+    public Cards(@NotNull Long cardId, @NotNull String scheme, @NotNull String type, String bank) {
+        this.cardId = cardId;
+        this.scheme = scheme;
+        this.type = type;
+        this.bank = bank;
+    }
+    public Cards(){
+
+    }
+
+    @GeneratedValue(strategy= GenerationType.AUTO)
     @Id
     @NotNull
     @JsonIgnore
