@@ -20,7 +20,7 @@ public class CardService {
         this.cardsRepository = cardsRepository;
     }
 
-    Cards findCardsByCardId(Long cardId){
+    public Cards findCardsByCardId(Long cardId){
         return cardsRepository.findCardsByCardId(cardId);
     }
 }
