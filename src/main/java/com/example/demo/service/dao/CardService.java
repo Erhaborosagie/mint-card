@@ -21,6 +21,7 @@ public class CardService {
     }
 
     public Cards findCardsByCardId(Long cardId){
-        return cardsRepository.findCardsByCardId(cardId);
+        Cards cards = cardsRepository.findCardsByCardId(cardId);
+        return cards;
     }
 }

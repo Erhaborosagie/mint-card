@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -16,10 +17,12 @@ public class Cards {
 
     @Id
     @NotNull
+    @JsonIgnore
     private int id;
 
     @NotNull
     @Column(length = 40, unique = true)
+    @JsonIgnore
     private Long cardId;
 
     @NotNull
