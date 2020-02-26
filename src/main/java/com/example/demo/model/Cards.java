@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
  */
 @Data
 @Entity
-public class Cards {
+public class Cards{
 
     public Cards(@NotNull Long cardId, @NotNull String scheme, @NotNull String type, String bank) {
         this.cardId = cardId;
